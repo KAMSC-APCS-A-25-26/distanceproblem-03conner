@@ -1,39 +1,44 @@
-/*
- * TODO: APCS-A Distance Program
- *
- * Write a program that:
- *  1. Asks the user how many inputs (pairs of points) they want to enter.
- *  2. For each input, prompt them to enter two points in the format:
- *         (x1,y1)(x2,y2)
- *     Example: (2,3)(7,3)
- *
- *  3. Use Scanner with a custom delimiter:
- *     This should ignore parentheses, commas, and spaces so only numbers remain.
- *
- *  4. Extract x1, y1, x2, y2 as doubles.
- *
- *  5. Compute the distance between the two points:
- *
- *  6. Print the results
- * 
- *  7. Repeat until all inputs have been processed.
- *
- * Example Inputs:
- *  How many inputs? 3
- *  Enter input 1 (like (x1,y1)(x2,y2)): (2,3)(7,3)
- *  Enter input 2 (like (x1,y1)(x2,y2)): (4,5)(8,8)
- *  Enter input 3 (like (x1,y1)(x2,y2)): (-1,-2)(0,7)
- *
- */
-
-
+// NAME                 :   Conner Chan
+// GROUP                :   APCSA
+// LAST MODIFIED        :   9/16/25
+// PROBLEM ID           :   2.23
+// PROBLEM DESCRIPTION  :   Have the User input 2 cords, then output a result
+// SOURCES USED         :   AP CS textbook
+// PEOPLE I HELPED      :   Michael M
+// I RECEIVED HELP FROM :   Michael M
 import java.util.Scanner;
-
-
-public class DistanceMultiple {
-    public static void main(String[] args) {
-
-
+public class DistanceMultiple{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+// Allows java to ignore ()
+        sc.useDelimiter("[\\s,()]+");
+// Declares variables
+        double answer, x1, y1;
+// Runs the program 2 times
+        for(int k = 0; k < 2; k++)
+        {
+// Prompts users for the numbers
+            System.out.println("input cords in (x,y):");
+            int x = sc.nextInt();
+            int y = sc.nextInt();
+// Tells the user what is x and what is y
+            System.out.println("x = " + x + ", y =" + y);
+// Repeats last part
+            System.out.println("input cords in (x,y):");
+            sc.useDelimiter("[(),\\s]+");
+            int x2 = sc.nextInt();
+            int y2 = sc.nextInt();
+            System.out.println("x = " + x2 + ", y =" + y2);
+// Runs calculations
+            x1 = (x - x2);
+            y1 = (y - y2);
+            answer = Math.sqrt((x1 * x1) + (y1 * y1));
+// Outputs answer
+            System.out.println("The distance between the two points is " + answer);
+        }
     }
-
 }
+
+
+
+
