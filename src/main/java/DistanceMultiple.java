@@ -11,27 +11,23 @@ public class DistanceMultiple{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in).useDelimiter("[\\s,()]+");
 // Declares variables
-        double answer, x1, y1;
+        double answer, x, y;
 // Runs the program 2 times
         for(int t = 0; t < 3; t++)
         {
 // Prompts users for the numbers
             System.out.println("input cords in (x,y):");
-            int x = sc.nextInt();
-            int y = sc.nextInt();
+            int x1 = sc.nextInt();
+            int y1 = sc.nextInt();
 // Tells the user what is x and what is y
-            System.out.println("x = " + x + ", y =" + y);
-// Repeats last part
-            System.out.println("input cords in (x,y):");
             int x2 = sc.nextInt();
             int y2 = sc.nextInt();
-            System.out.println("x = " + x2 + ", y =" + y2);
 // Runs calculations
-            x1 = (x - x2);
-            y1 = (y - y2);
-            answer = Math.sqrt((x1 * x1) + (y1 * y1));
+            x = (x2 - x1);
+            y = (y2 - y1);
+            answer = Math.sqrt((x * x) + (y * y));
 // Outputs answer
-            System.out.println("The distance between the two points is " + answer);
+            System.out.println(answer);
         }
     }
 }
