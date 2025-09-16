@@ -15,7 +15,7 @@ public class DistanceMultiple{
 // Declares variables
         double answer, x1, y1;
 // Runs the program 2 times
-        for(int t = 0; t < 3; t++)
+        for(int p = 0; p < 3; p++)
         {
 // Prompts users for the numbers
             System.out.println("input cords in (x,y):");
