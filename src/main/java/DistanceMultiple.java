@@ -9,9 +9,7 @@
 import java.util.Scanner;
 public class DistanceMultiple{
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-// Allows java to ignore ()
-        sc.useDelimiter("[\\s,()]+");
+        Scanner sc = new Scanner(System.in).useDelimiter("[\\s,()]+");
 // Declares variables
         double answer, x1, y1;
 // Runs the program 2 times
@@ -25,7 +23,6 @@ public class DistanceMultiple{
             System.out.println("x = " + x + ", y =" + y);
 // Repeats last part
             System.out.println("input cords in (x,y):");
-            sc.useDelimiter("[(),\\s]+");
             int x2 = sc.nextInt();
             int y2 = sc.nextInt();
             System.out.println("x = " + x2 + ", y =" + y2);
