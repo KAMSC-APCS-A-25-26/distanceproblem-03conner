@@ -13,7 +13,9 @@ public class DistanceMultiple{
 // Declares variables
         double answer, x, y;
 // Runs the program 2 times
-        for(int t = 0; t < 3; t++)
+        System.out.println("number of inputs?: ");
+        int numruns = sc.nextInt();
+        for(int t = 0; t < numruns; t++)
         {
 // Prompts users for the numbers
             System.out.println("input cords in (x,y):");
